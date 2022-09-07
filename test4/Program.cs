@@ -6,7 +6,7 @@ int t = num;
 int sum = 0;
 int r = 0;
 
-while (num != 0)
+while (num != 0)  // for(t = num; num != 0; num = num / 10;)
 {
     r = num % 10;
     num = num / 10;
