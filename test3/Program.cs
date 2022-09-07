@@ -15,7 +15,7 @@ long turn(long arg) // Фунция переворота
     long num2 = Convert.ToInt64(s);
     return num2;
 }
-long num3 = turn(num);
+long num_razvorot = turn(num);
 
-if (num3 == num) Console.WriteLine("Да");
+if (num_razvorot == num) Console.WriteLine("Да");
 else Console.WriteLine("Нет");
