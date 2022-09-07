@@ -1,45 +1,54 @@
-﻿
-Console.WriteLine("Два отрезка x1,x2 и x3,x4");
-Console.Write("Введите точку отрезка x1: ");
-int x1 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите точку отрезка x2: ");
-int x2 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите точку отрезка x3: ");
-int x3 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите точку отрезка x4: ");
-int x4 = Convert.ToInt32(Console.ReadLine());
-if (x2 > x1)
- if (x1 < x3 && x2 > x3)
-  if (x1 < x4 && x2 > x4)
-    Console.WriteLine($" Отрезок {x1} до {x2} пересекает {x3} до {x4}");
+﻿// Задача 19 Напишите программу, которая принимает на вход пятизначное число
+// и проверяет, является ли оно палиндромом.
+// 14212 -> нет
+// 12821 -> да
+// 23432 -> да
 
-else if (x1 < x3 && x2 > x3)
-      if (x4 > x3)
-        Console.WriteLine($"№1 Отрезки перескають точки  от  {x3} до {x2}");
-      if (x4 < x3 && x1 > x2)
-        Console.WriteLine($"№2 Отрезки пересекают точки от {x3} до {x1}");
+Console.Write("Введите 5ти значное число :");
+int num = Convert.ToInt32(Console.ReadLine());
 
-else if (x1 < x4 && x2 > x4)
-      if (x4 > x3)
-        Console.WriteLine($"№3 Отрезки пересекают от {x4} до {x1}");
-      if (x4 < x3 && x1 > x2)
-        Console.WriteLine($"№4 Отрезки пересекают от {x4} до {x2}");
+int num1 = 0, num2 = 0, num3 = 0, num4 = 0, num5 = 0;
+int n = num;
 
-else if (x1 > x2)
-    if (x2 < x3 && x1 > x3)
-      if (x2 < x4 && x1 > x4)
-        Console.WriteLine($" Отрезки {x2} до {x1} пересекает {x3} до {x4}");
+// int razdel(int result)
+// {
+// int num1 = 0, num2 = 0, num3 = 0, num4 = 0, num5 = 0;
+// int n = result;
 
-else if (x2 < x3 && x1 > x3)
-     if (x4 > x3)
-        Console.WriteLine($"№5 Отрезки пересекают точки от {x3} до {x1}");
-     if (x4 < x3 && x2 > x1)
-        Console.WriteLine($"№6 Отрезки пересекают точки от {x3} до {x2}");
+//     num1 = n % 10;    // 5
+//     n = n / 10;       //1234
+//     num2 = n % 100;    // 4
+//     n = n / 10;       //123  
+//     num3 = n % 10;    // 3
+//     n = n / 10;       //12
+//     num4 = n % 10;    // 2
+//     num5 = n / 10;    // 1
+//     if (num1 == num5 && num2 == num4)
+// return 
+// }
 
-else if (x2 < x4 && x1 > x4)
-    if (x4 > x3)
-        Console.WriteLine($"№7 Отрезки пересекают точки от {x4} до {x2}");
-    if (x4 < x3 && x2 > x1)
-        Console.WriteLine($"№8 Отрезки пересекают точки от {x4} до {x1}");
+if (num > 9999 && num < 100000)
+{                                //12345
+    num1 = n % 10;    // 5
+    // n = n / 10;       //1234
+    num2 = n % 100;    // 4
+    // n = n / 10;       //123  
+    num3 = n % 1000;    // 3
+    // n = n / 10;       //12
+    num4 = n % 10000;    // 2
+    num5 = n % 100000;    // 1
+
+
+    if (num1 == num5 && num2 == num4)
+    {
+        Console.WriteLine($"{num} являеться палиндромом {num1}{num2}{num3}{num4}{num5}");
+    }
+    else 
+    {
+        Console.WriteLine("Не являеться палиндромом");
+    }
+}
+else 
+Console.WriteLine("Не 5ти значное число ");
 
 
